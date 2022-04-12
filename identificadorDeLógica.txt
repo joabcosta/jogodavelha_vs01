@@ -1,0 +1,32 @@
+Lógicas:
+#1 : Função para captar evento de click e configurar algo
+        - objetivo geral:
+                > ao clicar no quadrado, inserir X ou O, dependendo do 
+                  jogador da vez
+
+        - técnica 1 utilizada - "ESCUTAR ONDE MODIFICAR":
+                > uma função no js  "function escutarEventoOnClick()" recebe um id-html
+                > o id-html é passado utilizando função nativa html onclick="";
+
+        - técnica 2 utilizada - "ONDE E O QUE MODIFICAR":
+                > dentro da função js para escutar o html:
+                     1. utilizar a função da biblioteca "document.N" para capturar a div pelo id
+                     2. configurar: o texto que ira aparecer: x.document.innerHTML
+                     3. estilizar: o background da div x.style.color = '#000'
+
+        - técnica 3 utilizada - "ONDE E O QUE MODIFICAR":
+                > ao carregar a página, inicializar um jogador X ou 0.
+                    1. utiliza a função js mudarJogador() para modificar o jogador na inicialização
+                    2. dentro da função js de escutar o html:
+                        2.1 checar qual jogador da vez e trocar - utilizando if
+                        2.2 chegar se o quadrado já foi clicado - utilizando return (equivalente ao break)
+
+#2 : Função para a lógica de pontuação
+        - objetivo geral:
+                > checar a jogada e o vencedor do jogador
+        - técnica 1 utilizada - "ONDE VERIFICAR"
+                > mapear todos os quadrados, passando para uma matriz ou individualmente
+                > criar uma função para checar uma sequencia tripla qualquer
+                > criar uma função para enviar a matriz ou sequencias indivudais para chegagem
+                > função para modificar a sequencia tripla caso seja true
+                > função para modificar a div que exibe o vencedor do jogo
